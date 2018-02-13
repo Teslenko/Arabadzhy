@@ -33,7 +33,7 @@ Things you may want to cover:
 
 -------------
 
-*heroku git:remote -a fasthunter
+*heroku git:remote -a dmitriyarabadzhy
 
 *git add .
 
