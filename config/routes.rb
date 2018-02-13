@@ -11,18 +11,9 @@ Rails.application.routes.draw do
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
 
-
   resources :candidates do
     resources :comments
   end
-
-
-  # get 'users/profile'
-
-  # get 'users/profile', as: 'user_root'
-  # devise_for :users
-  # devise_for :users, controllers: { sessions: 'users/sessions' }
-
 
   get '/home' => 'static_pages#home'
   get '/help' => 'static_pages#help'
@@ -34,10 +25,6 @@ Rails.application.routes.draw do
   get :home_list, controller: :candidates
   get :search, controller: :candidates
   get :autocomplete, controller: :candidates
-
-  # root  'static_pages#home'
-
-
 
   resources :candidates
 

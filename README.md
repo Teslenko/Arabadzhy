@@ -27,7 +27,7 @@ Things you may want to cover:
 
 *git commit -m "first commit" 
 
-*git remote add origin https://github.com/Teslenko/Hakaton_Recruiter
+*git remote add origin https://github.com/Teslenko/Arabadzhy
 
 *git push -u origin master
 
@@ -56,7 +56,6 @@ git push --force
 
 --------------------
 
-
 If you use the command: git fetch --all and git reset --hard origin/master -  it is the enter next command to restore
 
 *git reset --merge ORIG_HEAD*
@@ -64,6 +63,16 @@ If you use the command: git fetch --all and git reset --hard origin/master -  it
 --------------------
 
 http://aakinshin.net/ru/blog/post/git-log/ - View the Git Logs
+
+--------------------
+
+Changing a remote's URL:
+
+git remote -v
+
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+
+git remote -v
 
 --------------------
 

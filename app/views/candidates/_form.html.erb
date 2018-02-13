@@ -110,7 +110,7 @@
  <div style="padding-left: 25px" class="dropdown show" >
 
   <% unless current_page?(controller: 'candidates', action: 'new') %>
-       <div class="btn btn-large" style="background-color: #99ddd8;" type="button" data-toggle="dropdown"><%= form.select :status, [['Home'], ['Reserved'], ['Black list']], selected: 'Home' %></div>
+       <div class="btn btn-large" style="background-color: #99ddd8;" type="button" data-toggle="dropdown"><%= form.select :status, [['В Продаже'], ['В Резерве'], ['Продан']], selected: 'В Продаже' %></div>
   <% end %>
    <b>     - Select group for candidate</b>
 

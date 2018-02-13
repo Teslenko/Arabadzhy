@@ -3,13 +3,46 @@
 <html>
 <head>
   <title>Fast Hunter|Tesl Engineering<%= yield(:title) %></title>
-
-
 </head>
 <body>
 
 <% provide(:title, 'Home') %>
 <h1>Sample App</h1>
+
+
+<div style="display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding:20px 0;
+    font-size: 30px;"
+
+     class="grid row">
+  <div class="col">
+    <div class="card">
+
+          <% @candidates.each do |candidate| %>
+        <br><br>
+      <% if candidate.image.present? %>
+        <%= link_to (image_tag candidate.image.thumb.url), candidate_path(candidate), class: "img-responsive" %>
+      <% else %>
+        can't upload image
+      <% end %>
+        <br>
+        <%= candidate.name %>
+        <br>
+    <% end %>
+
+    </div>
+  </div>
+</div>
+
+
+
+
 <style>
   {  url(images/recruiting_5.jpg); }
 </style>

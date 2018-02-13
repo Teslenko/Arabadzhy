@@ -11,9 +11,9 @@
 <div style="padding-left: 10px;
     position: relative;" >
 
-  <%= link_to 'New Candidate', new_candidate_path, class: 'btn btn-primary', type: "button" %>
-  <%= link_to 'Black List', black_list_path, class: 'btn btn-primary', type: "button" %>
-  <%= link_to 'Reserved', reserved_path, class: 'btn btn-primary', type: "button" %>
+  <%= link_to 'Создать Новый Товар', new_candidate_path, class: 'btn btn-primary', type: "button" %>
+  <%= link_to 'Проданный Товар', black_list_path, class: 'btn btn-primary', type: "button" %>
+  <%= link_to 'Резерв', reserved_path, class: 'btn btn-primary', type: "button" %>
 
  <b style="text-align: right;
      position: absolute;
@@ -29,13 +29,13 @@
   <thead>
     <tr>
       <th></th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Developing language</th>
-      <th>Status</th>
+      <th>Название</th>
+      <th>Описание</th>
+      <!--<th></th>-->
+      <th>Статус Товара</th>
       <th></th>
 
-      <th colspan="3">Action</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
@@ -49,7 +49,7 @@
         </td>
         <td><%= candidate.name %></td>
         <td><%= candidate.description %></td>
-        <td><%= candidate.dev_language %></td>
+        <!--<td><%#= candidate.dev_language %></td>-->
         <td><%= candidate.status %></td>
         <td><%= link_to 'Show', candidate,class: "btn btn-large btn-primary", type: "button" %></td>
         <td><%= link_to 'Edit', edit_candidate_path(candidate),class: "btn btn-large btn-primary", type: "button" %></td>

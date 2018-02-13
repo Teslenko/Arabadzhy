@@ -49,12 +49,12 @@ textarea {
 }
 
 .navbar-inner{
-  background: #6cdaf8;//#c4d8db;
+  background: #dada22;//#c4d8db;
   padding: 0px;
 }
 
 .Logoimage{
-  float: left;
+  position: absolute;
 }
 
 .p1 {
@@ -100,7 +100,7 @@ footer {
   }
 }
 .btn-primary{
-  background: #99ddd8;
+  background: #7f95a9
 }
 .page-wrap {
   min-height: 100%;
@@ -112,7 +112,7 @@ footer {
 .railstutorial{
   float: left;
   margin-top: 0%;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .Tesl{
@@ -133,7 +133,7 @@ footer :after {
 }
 
 .footer{              /* тут мы делаем футер статичным и привязываем его к полу */
-  background: #5bcbf8;
+  background: #191919;
   position: relative;
   bottom: 0%;
   width: 100%;
