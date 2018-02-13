@@ -58,8 +58,9 @@
 
   <% unless current_page?(controller: 'candidates', action: 'new') %>
        <div class="btn btn-large" style="background-color: #99ddd8;" type="button" data-toggle="dropdown"><%= form.select :status, [['В Продаже'], ['В Резерве'], ['Продан']], selected: 'В Продаже' %></div>
+     <b>     - Select group for candidate</b>
   <% end %>
-   <b>     - Select group for candidate</b>
+
 
  </div>
 
