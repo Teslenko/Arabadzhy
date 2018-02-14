@@ -43,6 +43,8 @@ Things you may want to cover:
 
 --------------------
 
+heroku pg:psql 
+
 SELECT * FROM candidates;
 
 UPDATE candidates SET name = 'Ремень' WHERE ID = 1;

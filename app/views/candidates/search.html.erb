@@ -56,9 +56,9 @@
       <tr><div class="container" >
         <div class="row">
           <th></th>
-          <th style="text-align: center; " >Name</th>
-          <th style="text-align: center">Description</th>
-          <th style="text-align: center">Developing langugage</th>
+          <th style="text-align: center; " >Название</th>
+          <th style="text-align: center">Описание</th>
+          <th style="text-align: center">Статус Товара</th>
           <th style="text-align: center"></th><br></div></div>
       </tr>
     </div>
@@ -67,7 +67,7 @@
     <tbody>
     <% if @candidates.present? %>
         <h1>
-          Lits Finded Candidates
+          Список найденных товаров
         </h1>
     <% else %>
         <tr> <h3>
@@ -79,13 +79,11 @@
         <td><%= image_tag candidate.image.thumb.url %></td>
         <td class="Show" style="padding: 25px"><button class="favth-btn " ><%= link_to candidate.name, candidate, class: "btn btn-mini btn-primary", type: "button" %></button></td>
         <td class="Show" style="padding: 25px"><button class="favth-btn"><%= link_to candidate.description, candidate, class: "btn btn-mini btn-primary", type: "button" %></button></td>
-        <td class="Show" style="padding: 25px"><button class="favth-btn"><%= link_to candidate.dev_language, candidate, class: "btn btn-mini btn-primary", type: "button" %></button></td>
+        <td class="Show" style="padding: 25px"><button class="favth-btn"><%= link_to candidate.status, candidate, class: "btn btn-mini btn-primary", type: "button" %></button></td>
        </tr>
     <% end %>
     </tbody>    
   </table>
 
-  <div class="ttt" style="padding: 10px">
-    <%= link_to 'Home', :back, class: 'btn btn-primary' %>
-  </div></div>
+ </div>
 </body>

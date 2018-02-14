@@ -1,4 +1,7 @@
 class CandidatesController < ApplicationController
+
+  http_basic_authenticate_with name: "", password: "", except: [:show]
+
   before_action :set_candidate, only: [:show, :edit, :update, :destroy]
    # before_action :authenticate_user!, except:  [:index, :show]
 
@@ -21,14 +24,14 @@ class CandidatesController < ApplicationController
 
   end
   def black_list
-    @blists = Candidate.where(status: 'Black list')
+    @blists = Candidate.where(status: 'Продан')
   end
 
   def reserved
-    @reserveds = Candidate.where(status: 'Reserved')
+    @reserveds = Candidate.where(status: 'В Резерве')
   end
   def home_list
-    @homes = Candidate.where(status: 'Home')
+    @homes = Candidate.where(status: 'В Продаже')
   end
   # GET /candidates/new
   def new
@@ -73,7 +76,7 @@ class CandidatesController < ApplicationController
     respond_to do |format|
       if @candidate.save
         
-        format.html { redirect_to @candidate, notice: 'Candidate was successfully created.' }
+        format.html { redirect_to @candidate, notice: 'Товар Создан' }
         format.json { render :show, status: :created, location: @candidate }
       else
         format.html { render :new }
@@ -88,7 +91,7 @@ class CandidatesController < ApplicationController
     respond_to do |format|
       if @candidate.update(candidate_params)
 
-        format.html { redirect_to @candidate, notice: 'Candidate was successfully updated.' }
+        format.html { redirect_to @candidate, notice: 'Данные товара обновленны' }
         format.json { render :show, status: :ok, location: @candidate }
 
       else
@@ -103,7 +106,7 @@ class CandidatesController < ApplicationController
   def destroy
     @candidate.destroy
     respond_to do |format|
-      format.html { redirect_to candidates_url, notice: 'Candidate was successfully destroyed.' }
+      format.html { redirect_to candidates_url, notice: 'Товар удален' }
       format.json { head :no_content }
     end
   end

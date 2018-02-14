@@ -2,20 +2,20 @@
 
 
 <div style=" padding-bottom: 20px; padding-left: 70px" >
-  <%= link_to 'Home', candidates_path, class: 'btn btn-primary'  %>
+  <%= link_to 'Вернуться к каталогу', candidates_path, class: 'btn btn-primary'  %>
 </div>
 
 <div class="input-group-addon">
   <div id="error_explanation2">
 
-<h1>The Candidate <%= @candidate.name %> </h1>
+<!--<h1> <%#= @candidate.name %> </h1>-->
 <p id="notice"><%= notice %></p>
 
-    <h3 ><%= @candidate.name %> </h3>
+    <h3 ><%= @candidate.name %></h3>
 
-    <!--<h3>-->
-    <!-- Candidates status:--> <%#= @candidat  e.status %>
-    <!--</h3>-->
+    <h3>
+    Статус товара: <%= @candidate.status %>
+    </h3>
 
 <table class="table  table-striped fixedtable" >
 
@@ -52,10 +52,10 @@
 <br>
     <br>
 
-<!--<H3>Добавить комментарий:</H3><br><br>-->
+<H3>Добавить комментарий:</H3><br><br>
 
-      <%#= render @candidate.comments %>
-      <%#= render 'comments/form' %>
+      <%= render @candidate.comments %>
+      <%= render 'comments/form' %>
 
 
   </div>
@@ -66,7 +66,7 @@
             method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %> |
 <%= link_to 'Редактировать', edit_candidate_path(@candidate), class: 'btn btn-primary' %>
     <p class="actions" style="; text-align: left; padding-top: 0px; padding-left: 25px; ">
-      <%= link_to 'Home', candidates_path, class: 'btn btn-primary'  %>
+      <%= link_to 'Вернуться к каталогу', candidates_path, class: 'btn btn-primary'  %>
     </p>
 </div>
 

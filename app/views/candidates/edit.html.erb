@@ -3,9 +3,9 @@
 <%= render 'form', candidate: @candidate %>
 
 <div class="actions" style="text-align: center; ">
-  <%= link_to 'Delete Candidate', @candidate, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
+  <%= link_to 'Удалить Товар', @candidate, method: :delete, data: { confirm: 'Вы уверенны, что хотите удалить?' }, class: 'btn btn-primary' %>
 </div>
 <div class="actions" style="text-align: left; padding-left: 25px ">
-<%= link_to 'Show', @candidate, class: 'btn btn-primary' %> |
-<%= link_to 'Home', candidates_path, class: 'btn btn-primary' %>
+<%= link_to 'К Просмотру Товара', @candidate, class: 'btn btn-primary' %> |
+<%= link_to 'Вернуться к каталогу', candidates_path, class: 'btn btn-primary' %>
 </div>
