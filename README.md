@@ -43,6 +43,14 @@ Things you may want to cover:
 
 --------------------
 
+SELECT * FROM candidates;
+
+UPDATE candidates SET name = 'Ремень' WHERE ID = 1;
+
+DELETE FROM candidates WHERE ID = 1;
+
+--------------------
+
 rake db:reset 
 
 rake db:migrate
