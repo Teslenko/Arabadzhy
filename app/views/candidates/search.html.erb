@@ -77,9 +77,18 @@
     <% end %>
     <% @candidates.each do |candidate| %>
         <td><%= image_tag candidate.image.thumb.url %></td>
-        <td class="Show" style="padding: 25px"><button class="favth-btn " ><%= link_to candidate.name, candidate, class: "btn btn-mini btn-primary", type: "button" %></button></td>
-        <td class="Show" style="padding: 25px"><button class="favth-btn"><%= link_to candidate.description, candidate, class: "btn btn-mini btn-primary", type: "button" %></button></td>
-        <td class="Show" style="padding: 25px"><button class="favth-btn"><%= link_to candidate.status, candidate, class: "btn btn-mini btn-primary", type: "button" %></button></td>
+        <td class="Show" style="padding: 25px"><button class="favth-btn " >
+          <%= link_to candidate.name, candidate, class: "btn btn-mini btn-primary", type: "button" %>
+        </button></td>
+
+        <td class="Show" style="padding: 25px"><button class="favth-btn">
+          <%= link_to candidate.description, candidate, class: "btn btn-mini btn-primary", type: "button" %>
+        </button></td>
+
+        <td class="Show" style="padding: 25px"><button class="favth-btn">
+          <%= link_to candidate.status, candidate, class: "btn btn-mini btn-primary", type: "button" %>
+        </button></td>
+
        </tr>
     <% end %>
     </tbody>    
