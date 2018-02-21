@@ -3,28 +3,34 @@
 <html>
 <head>
   <title>Arabadzhy Production|Tesl Engineering<%= yield(:title) %></title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 </head>
 <body>
 
 <% provide(:title, 'Home') %>
-<h1>ИЗДЕЛИЯ ИЗ НАТУРАЛЬНОЙ КОЖИ</h1>
-<button style="background-position:center; position: center", class="favth-btn">
-  <%= link_to 'Админка', candidates_path, class: "btn btn-mini btn-warning", type: "button"%>
-</button>
 
-<div style="display: grid;
+<h1>ИЗДЕЛИЯ <!--ИЗ НАТУРАЛЬНОЙ КОЖИ--></h1>
+<div
+style="display: grid;
     grid-template-columns: auto auto auto auto;
     grid-gap: 10px;
     background-color: #2196F3;
-    padding: 10px;
+    /*padding: 10px;*/
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding:20px 0;
-    font-size: 30px;"
+    font-size: 30px;" class="row">
 
-     class="grid row">
-  <div class="col">
-    <div class="card">
+
+
+  <br>
+
+
+
+  <!--<div class="row">-->
+    <!--<div class="col-sm-4" >-->
 
           <% @candidates.each do |candidate| %>
         <br><br>
@@ -33,33 +39,18 @@
       <% else %>
         can't upload image
       <% end %>
-        <br>
+        <!--<br>-->
         <%= candidate.name %>
         <br>
     <% end %>
 
-    </div>
-  </div>
+    <!--</div>-->
+  <!--</div>-->
 </div>
 
-
-
-
-<style>
-  {  url(images/recruiting_5.jpg); }
-</style>
-
-<div class="navbar-nav pull-xs-rigth">
-<!--Show Home Page-->
   <button style="background-position:center; position: center", class="favth-btn">
     <%= link_to 'Админка', candidates_path, class: "btn btn-mini btn-warning", type: "button"%>
   </button>
-<br><br>
 
-
-
-
-
-</div>
 </body>
 </html>
