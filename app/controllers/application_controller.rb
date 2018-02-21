@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # config.filter_parameters << :password
   # before_action :set_locale
 
-  include SessionsHelper
+  # include SessionsHelper
 
   # def after_sign_in_path_for(resource)
     # if current_user.has_attribute?(:admin)
