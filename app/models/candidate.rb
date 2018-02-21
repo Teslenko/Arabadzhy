@@ -19,9 +19,7 @@ class Candidate < ApplicationRecord
             length: { minimum: 5 }
 
   def self.to_csv
-    attributes = %w{name description dev_language status level_skills
-      suggest_project contact_data present_job expected_salary final_salary
-      data_from cand_comment level_language}    #прописываем какие поля мы хотим в итоге скачать
+    attributes = %w{name description status }    #прописываем какие поля мы хотим в итоге скачать
     CSV.generate(headers: true) do |csv|
       csv << attributes
 

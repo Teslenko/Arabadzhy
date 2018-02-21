@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :users
+  # resources :users
 
   resources :candidates do
     resources :comments
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   resources :candidates
 
-  root  'candidates#index'
+  root  'static_pages#home'
 
 
 end
