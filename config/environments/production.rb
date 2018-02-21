@@ -87,11 +87,11 @@ Rails.application.configure do
   end
 
   # BEFORE:
-      config.eager_load = true<
+  #     config.eager_load = true<
 
  # AFTER:
-      config.eager_load = false
-
+ #      config.eager_load = false
+  # 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
