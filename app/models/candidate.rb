@@ -16,7 +16,7 @@ class Candidate < ApplicationRecord
 
   has_many :comments, dependent: :destroy
   validates :name, presence: true,
-            length: { minimum: 5 }
+            length: { minimum: 3 }
 
   def self.to_csv
     attributes = %w{name description status }    #прописываем какие поля мы хотим в итоге скачать

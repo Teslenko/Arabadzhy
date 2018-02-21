@@ -19,7 +19,7 @@
     <div class="actions">
 
       <tr>
-        <td   class="col-md-2 left image"><%= form.label :image, "Avatar"%><br>
+        <td   class="col-md-2 left image"><%= form.label :image, "Загрузить Изображение Товара"%><br>
 
           <button class="favth-btn">
         <%= form.file_field :image, class: "btn btn-large btn-primary" %>
@@ -39,12 +39,12 @@
     </div>
 
     <tr>
-      <td  class="col-md-2 left"><%= form.label :name %></td>
-      <td class="right"><%= form.text_field :name, id: :candidate_name %></td>
+      <td  class="col-md-2 left"><%= form.label :name, "Название Товара" %></td>
+      <td class="right"><%= form.text_field :name, id: :candidate_name%></td>
     </tr>
 
     <tr>
-      <td  class="col-md-2 left"><%= form.label :description %></td>
+      <td  class="col-md-2 left"><%= form.label :description, "Описание Товара" %></td>
       <td class="right"><%= form.text_area :description, id: :candidate_description %></td>  <!--Candidate Desription-->
     </tr>
 
@@ -67,6 +67,6 @@
 
 
   <div class="actions" style="text-align: center; ">
-    <%= form.submit "Обновить/Создать", class: 'btn btn-large btn-primary' %>
+    <%= form.submit "✔", class: 'btn btn-large btn-success' %>
   </div>
 <% end %>

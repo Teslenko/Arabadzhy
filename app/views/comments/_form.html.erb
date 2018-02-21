@@ -1,13 +1,87 @@
-<%= form_with(model: [ @candidate, @candidate.comments.build ], local: true) do |form| %>
-  <p>
-    <%= form.label :"Кто комментирует" %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :Комментарий %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit :"Создать комментарий", class: 'btn-sm btn-primary' %>
-  </p>
-<% end %>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Effects - Show Demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
+  <style>
+    .toggler { width: 100px; height: 10px; }
+    #button { padding: .5em 1em; text-decoration: none; }
+    #effect { width: 300px; height: 220px; padding: 0.4em; position: relative; text-align: center;  }
+    #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+  </style>
+
+  <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+       <script>
+      $( function() {
+          // run the currently selected effect
+          function runEffect() {
+              // get effect type from
+              var selectedEffect = $( "#effectTypes" ).val();
+              // Most effect types need no options passed by default
+              var options = {};
+              // some effects have required parameters
+              if ( selectedEffect === "fold" ) {
+                  options = { percent: 50 };
+              } else if ( selectedEffect === "size" ) {
+                  options = { to: { width: 500, height: 500 } };
+              }
+              // Run the effect
+              $( "#effect" ).show( selectedEffect, options, 500, callback );
+          };
+          //callback function to bring a hidden box back
+          function callback() {
+              setTimeout(function() {
+                  $( "#effect:visible" ).removeAttr( "style" ).fadeOut();
+              }, 30000 );
+          };
+          // Set effect from select menu value
+          $( "#button" ).on( "click", function() {
+              runEffect();
+          });
+          $( "#effect" ).hide();
+      } );
+  </script>
+</head>
+
+<body>
+
+<div style="margin-left: auto;
+    margin-right: auto;
+    width: 6em; padding-right: 924px">
+
+<div class="toggler">
+  <div id="effect" class="ui-widget-content ui-corner-all">
+
+    <%= form_with(model: [ @candidate, @candidate.comments.build ], local: true) do |form| %>
+      <p>
+        <%= form.label :"Кто комментирует" %>
+        <%= form.text_field :commenter %>
+      </p>
+      <br><p>
+        <%= form.label :Комментарий %>
+        <%= form.text_area :body %>
+      </p>
+      <br>
+      <p>
+        <%= form.submit :"Создать комментарий", class: 'btn-sm btn-primary' %>
+      </p>
+    <% end %>
+
+  </div></div>
+</div>
+
+<!--<select class="opacity" name="effects" id="effectTypes">-->
+
+  <!--<option value="fold"></option>-->
+
+<!--</select>-->
+
+<div id="button" class="btn btn-mini btn-primary">Добавить Комментарий</div>
+
+
+</body>
+

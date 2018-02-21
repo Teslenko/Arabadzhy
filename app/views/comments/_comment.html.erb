@@ -1,11 +1,9 @@
-<div>
 
-  <h4> <%= comment.commenter %>:</h4>
-<strong><%= comment.body %></strong>
-</div>
-<br><br>
-<p>
-  <%= link_to 'Удалить Комментарий', [comment.candidate, comment], class: 'btn-sm btn-primary',
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p><br><br>
+
+  <h4><%= comment.commenter %>: <strong><%= comment.body %></strong> -
+    <%= link_to '✗', [comment.candidate, comment], class: 'btn-sm btn-danger',
+                                                                                method: :delete,
+                                                                                data: { confirm: 'Are you sure?' } %><h4>
+
+
+      <br><br><br><br><br><br><br><br>

@@ -1,4 +1,4 @@
-<% provide(:title, 'Home') %>
+<% provide(:title, '') %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,48 +9,33 @@
 </head>
 <body>
 
-<% provide(:title, 'Home') %>
+<% provide(:title, '') %>
 
 <h1>ИЗДЕЛИЯ <!--ИЗ НАТУРАЛЬНОЙ КОЖИ--></h1>
-<div
-style="display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 10px;
-    background-color: #2196F3;
-    /*padding: 10px;*/
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding:20px 0;
-    font-size: 30px;" class="row">
+<main class="center">
+<div class = "gridtesl" style="padding-right: 190px;"
 
-
-
+>
+  <!--<div class = "gri">-->
   <br>
-
-
-
-  <!--<div class="row">-->
-    <!--<div class="col-sm-4" >-->
-
-          <% @candidates.each do |candidate| %>
-        <br><br>
-      <% if candidate.image.present? %>
-        <%= link_to (image_tag candidate.image.thumb.url), candidate_path(candidate), class: "img-responsive" %>
-      <% else %>
-        can't upload image
-      <% end %>
-        <!--<br>-->
-        <%= candidate.name %>
-        <br>
+  <% @candidates.each do |candidate| %>
+    <br><br>
+    <% if candidate.image.present? %>
+      <div ><%= link_to (image_tag candidate.image.thumb.url), candidate_path(candidate), class: "img-responsive" %>
+    <% else %>
+      can't upload image
     <% end %>
-
-    <!--</div>-->
-  <!--</div>-->
+    <!--<br>-->
+    <br><%= candidate.name %><br><br></div>
+    <br>
+  <% end %>
 </div>
-
-  <button style="background-position:center; position: center", class="favth-btn">
-    <%= link_to 'Админка', candidates_path, class: "btn btn-mini btn-warning", type: "button"%>
-  </button>
+<!--</div>-->
+<br>
+</main>
+<button style="background-position:center; position: center", class="favth-btn">
+  <%= link_to 'Админка', candidates_path, class: "btn btn-mini btn-warning", type: "button"%>
+</button>
 
 </body>
 </html>

@@ -19,10 +19,17 @@
 
 <table class="table  table-striped fixedtable" >
 
-  <div>
-  <div>
+  <div >
+  <div >
     <tr>
-      <th  id="Show_page_Image";  class="Image_Show col-md-2"><%= image_tag @candidate.image.thumb.url %></th>
+      <th  id="Show_page_Image";
+           class="Image_Show col-md-2"
+           STYLE=" width: 100%;
+               height: 100%;
+               /*position: absolute;*/
+               top: 0;
+               left: 0;
+               overflow: auto;"><%= image_tag @candidate.image.thumb.url %></th>
       <td></td>
     </tr>
     <tr>
@@ -52,7 +59,7 @@
 <br>
     <br>
 
-<H3>Добавить комментарий:</H3><br><br>
+<!--<H3>Добавить комментарий:</H3><br><br>-->
 
       <%= render @candidate.comments %>
       <%= render 'comments/form' %>

@@ -1,4 +1,4 @@
-<h1> Black list </h1>
+<h1> Проданный Товар </h1>
 <% if @blists.present? %>
 	
 		<table class="table">
@@ -34,5 +34,5 @@
   <%= link_to 'Вернуться к каталогу', root_path, class: "btn btn-large btn-primary" %>
   </div>
 	<% else %>
-	 <h3>No candidates in your black list</h3>	
+	 <h3>Сейчас нет проданного товара</h3>
 <% end %>

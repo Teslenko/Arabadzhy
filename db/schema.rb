@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20180128030024) do
     t.text "cand_comment"
     t.string "level_language"
     t.string "document"
-    t.string "status", default: "Home"
+    t.string "status", default: "В Продаже"
   end
 
   create_table "comments", force: :cascade do |t|
