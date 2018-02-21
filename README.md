@@ -53,6 +53,16 @@ DELETE FROM candidates WHERE ID = 1;
 
 --------------------
 
+Стереть БД, но потом снова надо создать
+
+heroku pg:reset DATABASE - стереть БД, но потом снова надо создать
+
+heroku addons:create heroku-postgresql:hobby-dev
+
+heroku run rails db:migrate
+
+--------------------
+
 rake db:reset 
 
 rake db:migrate
