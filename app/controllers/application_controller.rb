@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   include SessionsHelper
 
-  def after_sign_in_path_for(resource)
+  # def after_sign_in_path_for(resource)
     # if current_user.has_attribute?(:admin)
     #   dashboard_path
     # elsif current_user.has_attribute?(:users)
@@ -13,12 +13,12 @@ class ApplicationController < ActionController::Base
     # else
     #   root_path
     # end
-    candidates_path
-  end
+  #   candidates_path
+  # end
 
-  private
-  def after_sign_out_path_for(resource_or_scope)
-    home_path
-  end
+  # private
+  # def after_sign_out_path_for(resource_or_scope)
+  #   home_path
+  # end
 
 end

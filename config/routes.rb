@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
 
-  devise_for :admins
-  devise_for :users
+  # devise_for :admins
+  # devise_for :users
   resources :users
 
   resources :sessions, only: [:new, :create, :destroy]
