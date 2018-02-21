@@ -35,14 +35,14 @@
 
       <div style="position: absolute; color: #589933" class='Home_page_Title'> 
           <h3>
-              Search results for "<%= params[:q] %>"
+              Результаты поиска по "<%= params[:q] %>"
               <!-- Search Results for -->
           </h3>
       </div>
 
   <% else %>
       <h1>
-        <%= t('search.please_type_something') %>
+        <%= t('search.Пожалуйста_Введите_Правильное_Значение') %>
         <!-- "Please, type anything" -->
       </h1>
   <% end %>
@@ -71,8 +71,9 @@
         </h1>
     <% else %>
         <tr> <h3>
-          Nothing found by
+          Ничего не Найдено
           "<%= params[:q] %>"
+
         </h3>
     <% end %>
     <% @candidates.each do |candidate| %>
