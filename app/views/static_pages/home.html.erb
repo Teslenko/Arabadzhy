@@ -3,39 +3,95 @@
 <html>
 <head>
   <title>Arabadzhy Production|Tesl Engineering<%= yield(:title) %></title>
-
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <style>
+    .grid-container {
+      display: grid;
+      grid-gap: 50px;
+      grid-template-columns: auto auto auto;
+      background-color:#ffffff;
+      padding: 10px;
+    }
+    .grid-item {
+      background-color: #dada22;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+  </style>
 
 </head>
 <body>
 
 <% provide(:title, '') %>
 
-<h1>ИЗДЕЛИЯ <!--ИЗ НАТУРАЛЬНОЙ КОЖИ--></h1>
+<h1>ИЗДЕЛИЯ ИЗ НАТУРАЛЬНОЙ КОЖИ</h1>
 <main class="center">
-<div class = "gridtesl" style="padding-right: 190px;"
 
->
-  <!--<div class = "gri">-->
-  <br>
-  <% @candidates.each do |candidate| %>
-    <br><br>
-    <% if candidate.image.present? %>
-      <div ><%= link_to (image_tag candidate.image.thumb.url), candidate_path(candidate), class: "img-responsive" %>
-    <% else %>
-      can't upload image
-    <% end %>
-    <!--<br>-->
-    <br><%= candidate.name %><br><br></div>
+  <div class="grid-container">
+    <a href="https://www.yooying.com/p/1700372379635818614_6421532194">
+      <div class="grid-item">
+        <%= image_tag("Remen.jpg",:size =>"400", alt: "Rails") %></div>
+    </a>
+
+    <a href="https://www.yooying.com/p/1698214374140772076_6421532194">
+      <div class="grid-item">
+        <%= image_tag("1Dzudo.jpg",:size =>"400", alt: "Rails") %></div>
+    </a>
+
+    <a href="https://www.yooying.com/p/1696013541193867294_6421532194">
+      <div class="grid-item">
+        <%= image_tag("2Koshel.jpg",:size =>"400", alt: "Rails") %>
+      </div>
+    </a>
+
+    <a href="https://www.yooying.com/p/1693057043203435880_6421532194">
+      <div class="grid-item">
+        <%= image_tag("3RedKoshel.jpg",:size =>"400", alt: "Rails") %>
+      </div>
+    </a>
+
+    <a href="https://www.yooying.com/p/1693771845617944056_6421532194">
+      <div class="grid-item">
+        <%= image_tag("4Remen.jpg",:size =>"400", alt: "Rails") %>
+      </div>
+    </a>
+
+    <a href="https://www.yooying.com/p/1693036181532211390_6421532194">
+      <div class="grid-item">
+        <%= image_tag("5Sumka.jpg",:size =>"400", alt: "Rails") %>
+      </div>
+    </a>
+
+    <a href="https://www.yooying.com/p/1703741928624850921_6421532194">
+      <div class="grid-item">
+        <%= image_tag("6Chehol.jpg",:size =>"400", alt: "Rails") %>
+      </div>
+    </a>
     <br>
-  <% end %>
-</div>
+  </div>
+
+<!--<div class = "gridtesl" style="padding-right: 190px;">-->
+  <!--<br>-->
+  <!--<%# @candidates.each do |candidate| %>-->
+    <!--<br><br>-->
+    <!--<%# if candidate.image.present? %>-->
+      <!--<div >-->
+        <%#= link_to (image_tag candidate.image.thumb.url), candidate_path(candidate), class: "img-responsive" %>
+    <!--<%# else %>-->
+      <!--can't upload image-->
+    <!--<%# end %>-->
+    <!--&lt;!&ndash;<br>&ndash;&gt;-->
+    <!--<br><%#= candidate.name %><br><br></div>-->
+    <!--<br>-->
+  <!--<%# end %>-->
+<!--</div>-->
 <!--</div>-->
 <br>
 </main>
+
 <button style="background-position:center; position: center", class="favth-btn">
   <%= link_to 'Админка', candidates_path, class: "btn btn-mini btn-warning", type: "button"%>
 </button>
-
 </body>
 </html>
